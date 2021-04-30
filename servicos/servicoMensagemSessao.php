@@ -12,14 +12,14 @@ function setarMensagemSucesso(string $mensagem):void{
 
 function obterMensagemErro():?string{
     if(isset($_SESSION['mensagemErro'])){
-        return $_SESSION['obterMensagemErro'];
+        return $_SESSION['mensagemErro'];
     }
     return null;
 }
 
 function obterMensagemSucesso():?string{
     if(isset($_SESSION['mensagemSucesso'])){
-        return $_SESSION['obterMensagemSucesso'];
+        return $_SESSION['mensagemSucesso'];
     }
     return null;
 }

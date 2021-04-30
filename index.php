@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php include "servicos/servicoMensagemSessao.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,11 +12,11 @@
 <p>Formulario para Inscrição de Competidores</p>
 <form action="script.php" method="post">
     <?php
-        $mensagemSucesso = isset($_SESSION['mensagemSucesso']) ? $_SESSION['mensagemSucesso'] : '';
+        $mensagemSucesso = obterMensagemSucesso();
         if(!empty($mensagemSucesso)){
             echo $mensagemSucesso;
         }
-        $mensagemErro = isset($_SESSION['mensagemErro']) ? $_SESSION['mensagemErro'] : '';
+        $mensagemErro = obterMensagemErro();
         if(!empty($mensagemErro)){
             echo $mensagemErro;
         }
